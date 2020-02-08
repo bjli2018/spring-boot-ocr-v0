@@ -38,7 +38,7 @@ public class OcrService {
 		
 		cmd.add(tessPath + "//tesseract");
 		cmd.add("");
-		cmd.add(outputFile.getParent() + "\\" + outputFileName.substring(0,outputFileName.indexOf(".")));
+		cmd.add(outputFile.getParent() + "/" + outputFileName.substring(0,outputFileName.indexOf(".")));
 		cmd.add(LANG_OPTION);
 		cmd.add(language);
 		// cmd.add("eng");
@@ -55,6 +55,7 @@ public class OcrService {
 		String format = "yyyy-MM-dd HH:mm:ss";
 		SimpleDateFormat sdf = new SimpleDateFormat(format);  
 		System.out.println("开始时间：" + sdf.format(new Date(startTime)));
+		System.out.println("cmd：" + cmd);
 		Process process = pb.start();
 		// tesseract.exe 1.jpg 1 -l chi_sim
 		// 不习惯使用ProcessBuilder的，也可以使用Runtime，效果一致
