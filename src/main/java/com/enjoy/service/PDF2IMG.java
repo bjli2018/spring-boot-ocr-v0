@@ -22,7 +22,7 @@ public class PDF2IMG {
         String password = "";
         File inputFile = new File(inputFilePath);
         String pdfFile = inputFile.getPath();	 
-        String outputFilePath=inputFile.getParentFile().getPath() + "\\";	 
+        String outputFilePath=inputFile.getParentFile().getPath() + "/";	 
         String outputPrefix = inputFile.getName().substring(0, inputFile.getName().indexOf("."));
         String imageFormat = "jpg";
         int startPage = 1;
