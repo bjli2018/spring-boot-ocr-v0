@@ -21,7 +21,7 @@ import javax.net.ssl.X509TrustManager;
 
 import com.alibaba.fastjson.JSON;
  
-public class HttpsUtil {
+public class HttpsUtilDocker {
  
     private static final class DefaultTrustManager implements X509TrustManager {
         @Override
@@ -39,12 +39,12 @@ public class HttpsUtil {
     }
     		
     public static void main(String[] args) throws Exception{
-        String strURL = "https://192.168.43.52:8444/ocr/pdfToText";
+        String strURL = "https://192.168.43.42:8444/ocr/pdfToText";
         Map<String, String> paramMap = new HashMap<String, String>();
-        paramMap.put("inputFilePath", "D:/puppy/5.pdf");
-        paramMap.put("outputFilePath", "D:/puppy/5.txt");
+        paramMap.put("inputFilePath", "/root/ocr/testfile/eng_1.png");
+        paramMap.put("outputFilePath", "/root/ocr/testfile/eng_4_result.txt");
         paramMap.put("language", "eng");
-        paramMap.put("tessPath", "C:/Users/Administrator/Tesseract-OCR");
+        paramMap.put("tessPath", "/usr/bin");
         OutputStreamWriter out = null;
         InputStream is = null;
         SSLContext ctx = null;

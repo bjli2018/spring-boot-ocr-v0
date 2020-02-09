@@ -98,7 +98,7 @@ public class PDF2IMG {
                 }
  
             }
-            System.out.println("pdf转换jpg完成");
+            System.out.println("pdf to jpg completed");
  
         }
  

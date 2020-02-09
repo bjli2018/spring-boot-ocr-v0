@@ -54,8 +54,8 @@ public class OcrService {
 		long startTime = System.currentTimeMillis();
 		String format = "yyyy-MM-dd HH:mm:ss";
 		SimpleDateFormat sdf = new SimpleDateFormat(format);  
-		System.out.println("开始时间：" + sdf.format(new Date(startTime)));
-		System.out.println("cmd：" + cmd);
+		System.out.println("Begin Time:" + sdf.format(new Date(startTime)));
+		//System.out.println("cmd：" + cmd);
 		Process process = pb.start();
 		// tesseract.exe 1.jpg 1 -l chi_sim
 		// 不习惯使用ProcessBuilder的，也可以使用Runtime，效果一致
@@ -77,8 +77,8 @@ public class OcrService {
 			in.close();
 
 			long endTime = System.currentTimeMillis();
-			System.out.println("结束时间：" + sdf.format(new Date(endTime)));
-			System.out.println("耗时：" + (endTime - startTime)/1000 + "秒");
+			System.out.println("End Time:" + sdf.format(new Date(endTime)));
+			System.out.println("Cost Time:" + (endTime - startTime)/1000 + "Seconds");
 		} else {
 			String msg;
 			switch (w) {
