@@ -41,9 +41,9 @@ public class HttpsUtilDocker {
     public static void main(String[] args) throws Exception{
         String strURL = "https://192.168.43.42:8444/ocr/pdfToText";
         Map<String, String> paramMap = new HashMap<String, String>();
-        paramMap.put("inputFilePath", "/root/ocr/testfile/eng_1.png");
-        paramMap.put("outputFilePath", "/root/ocr/testfile/eng_4_result.txt");
-        paramMap.put("language", "eng");
+        paramMap.put("inputFilePath", "/root/ocr/testfile/sin_1.pdf");
+        paramMap.put("outputFilePath", "/root/ocr/testfile/sin_6_result.txt");
+        paramMap.put("language", "sin");
         paramMap.put("tessPath", "/usr/bin");
         OutputStreamWriter out = null;
         InputStream is = null;
