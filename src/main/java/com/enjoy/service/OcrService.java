@@ -16,14 +16,6 @@ public class OcrService {
 	private final static String LANG_OPTION = "-l";
 	private final static String EOL = System.getProperty("line.separator");
 	
-	/**
-	 * Tesseract-OCR的安装路径
-	 */
-	private static String tessPath = "C:\\Users\\Administrator\\Tesseract-OCR";
-	public void setTessPath(String tessPath) {
-		OcrService.tessPath = tessPath;
-	}
-	
 
 	/**
 	 * @param imageFile   传入的图像文件
@@ -36,7 +28,7 @@ public class OcrService {
 
 		String outputFileName = outputFile.getName();
 		
-		cmd.add(tessPath + "//tesseract");
+		cmd.add("tesseract");
 		cmd.add("");
 		cmd.add(outputFile.getParent() + "/" + outputFileName.substring(0,outputFileName.indexOf(".")));
 		cmd.add(LANG_OPTION);

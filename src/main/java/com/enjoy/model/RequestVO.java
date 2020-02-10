@@ -10,7 +10,6 @@ public class RequestVO implements Serializable {
 	private String inputFilePath;
 	private String outputFilePath;
 	private String language;
-	private String tessPath;
 	private String fileId;
 	
 }

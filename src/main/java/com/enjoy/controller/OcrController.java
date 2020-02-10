@@ -29,17 +29,14 @@ public class OcrController {
 		String inputFilePath = requestVO.getInputFilePath().replace("/data","/import");
 		String outputFilePath = requestVO.getOutputFilePath().replace("/data","/import");
 		String language = requestVO.getLanguage();
-		String tessPath = requestVO.getTessPath();
 		if(requestVO==null || 
 				ToolUtils.isEmpty(inputFilePath) || 
 				ToolUtils.isEmpty(outputFilePath) || 
-				ToolUtils.isEmpty(language) || 
-				ToolUtils.isEmpty(requestVO.getTessPath())) {
+				ToolUtils.isEmpty(language)) {
 			resultVO.setCode(400);
-			resultVO.setMsg("请求参数不正确,输入路径,输出路径,语言或者Tesseract路径不正确");
+			resultVO.setMsg("请求参数不正确,输入路径,输出路径,语言不正确");
 			return resultVO;
 		}
-		ocrService.setTessPath(tessPath);
 		if(inputFilePath.endsWith("pdf")) {
 			PDF2IMG.pdf2Img(inputFilePath);
 			inputFilePath = inputFilePath.substring(0,inputFilePath.indexOf(".")) + ".jpg";
