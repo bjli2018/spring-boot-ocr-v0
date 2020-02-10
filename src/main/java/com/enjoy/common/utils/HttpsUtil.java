@@ -43,7 +43,7 @@ public class HttpsUtil {
         Map<String, String> paramMap = new HashMap<String, String>();
         paramMap.put("inputFilePath", "D:/puppy/5.pdf");
         paramMap.put("outputFilePath", "D:/puppy/5.txt");
-        paramMap.put("language", "eng");
+        paramMap.put("language", "sin");
         paramMap.put("tessPath", "C:/Users/Administrator/Tesseract-OCR");
         OutputStreamWriter out = null;
         InputStream is = null;

@@ -46,7 +46,8 @@ public class OcrController {
 		}
 		ocrService.recognizeText(new File(inputFilePath),new File(outputFilePath),language);
 		resultVO.setCode(200);
-		resultVO.setMsg("处理成功");;
+		resultVO.setMsg("处理成功");
+		resultVO.setFileId(requestVO.getFileId());
 		return resultVO;	
 	}
 }
