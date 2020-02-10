@@ -26,8 +26,8 @@ public class OcrController {
 	@PostMapping("/ocr/pdfToText")
 	public ResultVO pdfToText(@RequestBody RequestVO requestVO) throws Exception {
 		ResultVO resultVO = new ResultVO();
-		String inputFilePath = requestVO.getInputFilePath();
-		String outputFilePath = requestVO.getOutputFilePath();
+		String inputFilePath = requestVO.getInputFilePath().replace("/data","/import");
+		String outputFilePath = requestVO.getOutputFilePath().replace("/data","/import");
 		String language = requestVO.getLanguage();
 		String tessPath = requestVO.getTessPath();
 		if(requestVO==null || 
