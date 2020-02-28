@@ -6,12 +6,12 @@ import org.apache.tomcat.util.descriptor.web.SecurityCollection;
 import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+//import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by BJLI on 2020/2/7.
  */
-@Configuration
+//@Configuration
 public class TomcatHttpConfig {
     @Bean
     public TomcatServletWebServerFactory servletContainer() { //springboot2 新变化
